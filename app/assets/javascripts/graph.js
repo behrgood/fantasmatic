@@ -1,35 +1,38 @@
 function chartLaunch() {
-    $(function () {
+    var data = {
+        title: 'Rushing Leaders',
+        subtitle: 'RB - Week 14',
+        categories: [
+            'Jeremy Hill',
+            'Arian Foster',
+            'Eddie Lacy',
+            'Doug Martin',
+            'Marshawn Lynch',
+            'CJ Anderson',
+            'DeMarco Murray',
+            'Giovani Bernard',
+            'Kerwynn Williams',
+            'Jonathon Stewart'
+        ],
+        rush_attempts: [1, 2, 3, 4, 5, 85, 81, 79, 75, 73]
+    }
     $('#container').highcharts({
         chart: {
             type: 'column'
         },
         title: {
-            text: 'League Leaders'
+            text: data.title
         },
         subtitle: {
-            text: 'RB - Week 14'
+            text: data.subtitle
         },
         xAxis: {
-            categories: [
-                'Jeremy Hill',
-                'Leveon Bell',
-                'Demarco Murray',
-                'Arian Foster',
-                'May',
-                'Jun',
-                'Jul',
-                'Aug',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec'
-            ]
+            categories: data.categories
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Points and things'
+                text: 'Statistical Data'
             }
         },
         tooltip: {
@@ -47,22 +50,21 @@ function chartLaunch() {
             }
         },
         series: [{
-            name: 'Tokyo',
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+            name: 'Attempts',
+            data: data.rush_attempts
 
         }, {
-            name: 'New York',
-            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+            name: 'Yards',
+            data: [148, 99, 97, 96, 91, 85, 81, 79, 75, 73]
 
         }, {
-            name: 'London',
-            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+            name: 'Touchdowns',
+            data: [2, 0, 1, 0, 1, 0, 2, 0, 0, 0]
 
         }, {
-            name: 'Berlin',
-            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+            name: 'Fantasy Points',
+            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1]
 
         }]
     });
-});
 }
