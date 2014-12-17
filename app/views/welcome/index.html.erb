@@ -2,46 +2,35 @@
     <%= render 'form' %>
   </div>
 
-<center>
 <div class="tab">
-
   <ul class="tabs">
-    <li><a href="#" onClick="getQbData()">QB</a></li>
-    <li><a href="#" onClick="getRbData()">RB</a></li>
-    <li><a href="#" onClick="getWrData()">WR/TE</a></li>
-    <li><a href="#">K</a></li>
+    <li><a href="#" onClick="getQbData()">Passing</a></li>
+    <li><a href="#" onClick="getRbData()">Rushing</a></li>
+    <li><a href="#" onClick="getWrData()">Receiving</a></li>
+    <li><a href="#">Kicking</a></li>
   </ul> <!-- / tabs -->
 
   <div class="tab_content">
 
     <div class="tabs_item">
-      <h4> QB - Week 14 </h4>
       <%= render 'qbgraph' %>
     </div> <!-- / tabs_item -->
 
     <div class="tabs_item">
-      <h4>RB - Week 14</h4>
       <%= render 'rbgraph' %>
     </div> <!-- / tabs_item -->
 
     <div class="tabs_item">
-      <h4>WR - Week 14</h4>
        <%= render 'wrgraph' %>
     </div> <!-- / tabs_item -->
 
-    <div class="tabs_item">
-      <h4>TE - Week 14</h4>
-       <p> This will show a graph. </p>
-    </div> <!-- / tabs_item -->
-
      <div class="tabs_item">
-      <h4>DEF - Week 14</h4>
-      <p> This will show a graph. </p>
+      <h4>Who cares.</h4>
     </div> <!-- / tabs_item -->
 
   </div> <!-- / tab_content -->
 </div> <!-- / tab -->
-</center>
+
 <!--
 <%= %>
 <%= %>

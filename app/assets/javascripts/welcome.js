@@ -1,4 +1,4 @@
--$(document).ready(function() {
+$(document).ready(function() {
     (function($) {
         $('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
 
@@ -15,21 +15,6 @@
             g.preventDefault();
         });
     })(jQuery);
-
-    // $("#submit").click(function(event) {
-    //     event.preventDefault();
-    //     $.ajax({
-    //         type: "GET",
-    //         url: "/api_call",
-    //         data: {
-    //             week: $("#week").val(),
-    //             season: $("#season").val()
-    //         },
-    //         success: function(data) {
-    //             return data
-    //         }
-    //     });
-    // });
 });
 
 function getQbData() {
@@ -108,7 +93,7 @@ function getQbData() {
                 }]
 
             }
-            var chartData = parsePassingStatsToHighChartsData('15', ajaxResult)
+            var chartData = parsePassingStatsToHighChartsData(ajaxResult.week, ajaxResult)
             qbChartLaunch(chartData);
         },
         error: function(data) {
@@ -151,8 +136,8 @@ function getRbData() {
         },
         success: function(data) {
             var ajaxResult = {
-                season: 2014,
-                week: 15,
+                season: data.leaders.season,
+                week: data.leaders.week,
 
                 rushing: [{
                     name: data.leaders.rushing.player[0].name,
@@ -216,7 +201,7 @@ function getRbData() {
                     touchdowns: parseInt(data.leaders.rushing.player[9].td)
                 }]
             }
-            var chartData = parseRushingStatsToHighChartsData('15', ajaxResult)
+            var chartData = parseRushingStatsToHighChartsData(ajaxResult.week, ajaxResult)
             rbChartLaunch(chartData);
         },
         error: function(data) {
@@ -224,7 +209,6 @@ function getRbData() {
         }
     });
 }
-
 
 function parseRushingStatsToHighChartsData(week, stats) {
     return {
@@ -253,14 +237,14 @@ function getWrData() {
     $.ajax({
         url: '/api_call',
         type: 'GET',
+        data: {
+            week: $("#week").val(),
+            season: $("#season").val()
+        },
         success: function(data) {
             var ajaxResult = {
-                season: 2014,
-                week: 15,
-                data: {
-                    week: $("#week").val(),
-                    season: $("#season").val()
-                },
+                season: data.leaders.week,
+                week: data.leaders.week,
                 receiving: [{
                     name: data.leaders.receiving.player[0].name,
                     receptions: parseInt(data.leaders.receiving.player[0].rec),
@@ -323,7 +307,8 @@ function getWrData() {
                     touchdowns: parseInt(data.leaders.receiving.player[9].td)
                 }]
             }
-            var chartData = parseReceivingStatsToHighChartsData('15', ajaxResult)
+
+            var chartData = parseReceivingStatsToHighChartsData(ajaxResult.week, ajaxResult)
             wrChartLaunch(chartData);
         },
         error: function(data) {
