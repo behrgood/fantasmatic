@@ -7,10 +7,10 @@
 
   <ul class="tabs">
     <li><a href="#" onClick="getQbData()">QB</a></li>
-    <li><a href="#" onClick="getQbData()">RB</a></li>
-    <li><a href="#" onClick="getQbData()">WR</a></li>
-    <li><a href="#" onClick="getQbData()">TE</a></li>
-    <li><a href="#" onClick="getQbData()">DEF</a></li>
+    <li><a href="#" onClick="getRbData()">RB</a></li>
+    <li><a href="#" onClick="getWrData()">WR/TE</a></li>
+    <li><a href="#">TE</a></li>
+    <li><a href="#">DEF</a></li>
   </ul> <!-- / tabs -->
 
   <div class="tab_content">
@@ -22,12 +22,12 @@
 
     <div class="tabs_item">
       <h4>RB - Week 14</h4>
-       <p> This will show a graph. </p>
+      <%= render 'rbgraph' %>
     </div> <!-- / tabs_item -->
 
     <div class="tabs_item">
       <h4>WR - Week 14</h4>
-       <p> This will show a graph. </p>
+       <%= render 'wrgraph' %>
     </div> <!-- / tabs_item -->
 
     <div class="tabs_item">
