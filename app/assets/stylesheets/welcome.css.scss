@@ -16,7 +16,7 @@ h2 {
   font-weight: bold;
   color: $green;
   font-size: 12px;
-  }
+}
 
 header img {
   width: 200px;
@@ -24,7 +24,7 @@ header img {
 
 /*// TAB ~~~~~~~~~~~~~~~*/
 .tab {
-  padding-top: 50px;
+  padding-top: 20px;
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
@@ -95,3 +95,34 @@ header img {
 }
 
 /*// END TAB ~~~~~~~~~~~~~~~*/
+.formz {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown {
+  width: 100px;
+  background: white;
+  color: #888;
+  border: 1px solid #eff0f2;
+}
+
+#sel_season {
+order: 4;
+padding: 10px;
+}
+#season_head {
+order: 3;
+padding: 10px;
+}
+
+#sel_week {
+order: 2;
+padding: 10px;
+}
+
+#week_head {
+order: 1;
+padding: 10px;
+}
