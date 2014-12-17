@@ -1,9 +1,48 @@
-<h1> App </h1>
-<h2> Words </h2>
+  <div class="formz">
+    <%= render 'form' %>
+  </div>
 
+<center>
+<div class="tab">
 
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <ul class="tabs">
+    <li><a href="#" onClick="getQbData()">QB</a></li>
+    <li><a href="#" onClick="getQbData()">RB</a></li>
+    <li><a href="#" onClick="getQbData()">WR</a></li>
+    <li><a href="#" onClick="getQbData()">TE</a></li>
+    <li><a href="#" onClick="getQbData()">DEF</a></li>
+  </ul> <!-- / tabs -->
 
+  <div class="tab_content">
+
+    <div class="tabs_item">
+      <h4> QB - Week 14 </h4>
+      <%= render 'qbgraph' %>
+    </div> <!-- / tabs_item -->
+
+    <div class="tabs_item">
+      <h4>RB - Week 14</h4>
+       <p> This will show a graph. </p>
+    </div> <!-- / tabs_item -->
+
+    <div class="tabs_item">
+      <h4>WR - Week 14</h4>
+       <p> This will show a graph. </p>
+    </div> <!-- / tabs_item -->
+
+    <div class="tabs_item">
+      <h4>TE - Week 14</h4>
+       <p> This will show a graph. </p>
+    </div> <!-- / tabs_item -->
+
+     <div class="tabs_item">
+      <h4>DEF - Week 14</h4>
+      <p> This will show a graph. </p>
+    </div> <!-- / tabs_item -->
+
+  </div> <!-- / tab_content -->
+</div> <!-- / tab -->
+</center>
 <!--
 <%= %>
 <%= %>

@@ -1,0 +1,7 @@
+<h4> Select Season </h4>
+  <%= form_tag("/", method: "get") do  %>
+   <%= select_tag :season, options_for_select(@seasons), class: "dropdown" %>
+<h4> Select Week </h4>
+    <%= select_tag :week, options_for_select(@weeks), class: "dropdown" %> <br>
+    <%= submit_tag("Submit", class: "button") %>
+<% end %>
