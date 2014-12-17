@@ -2,8 +2,7 @@ require 'httparty'
 class WelcomeController < ApplicationController
 
   def index
-    @week = params[:week]
-    @season = params[:season]
+
     get_arrays
   end
 
@@ -11,12 +10,15 @@ class WelcomeController < ApplicationController
   end
 
   def make_api_call
+    @week = params[:week]
+    @season = params[:season]
     render json: make_call
   end
 
   private
 
   def make_call
+    week = params[:week] || 15
     HTTParty.get("http://api.sportsdatallc.org/nfl-t1/2014/REG/15/leaders.xml?api_key=#{Figaro.env.sports_data_api_key}")
   end
 
@@ -46,6 +48,4 @@ class WelcomeController < ApplicationController
       ["17", "17"]
     ]
   end
-
-
 end
