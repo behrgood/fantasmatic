@@ -18,8 +18,9 @@ class WelcomeController < ApplicationController
   private
 
   def make_call
-    week = params[:week] || 15
-    HTTParty.get("http://api.sportsdatallc.org/nfl-t1/2014/REG/15/leaders.xml?api_key=#{Figaro.env.sports_data_api_key}")
+    # week = params[:week] || 15
+    # season = params[:season] || 2014
+    HTTParty.get("http://api.sportsdatallc.org/nfl-t1/#{@season}/REG/#{@week}/leaders.xml?api_key=#{Figaro.env.sports_data_api_key}") ||  HTTParty.get("http://api.sportsdatallc.org/nfl-t1/2014/REG/15/leaders.xml?api_key=#{Figaro.env.sports_data_api_key}")
   end
 
   def get_arrays

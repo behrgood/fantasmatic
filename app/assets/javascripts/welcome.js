@@ -15,6 +15,21 @@
             g.preventDefault();
         });
     })(jQuery);
+
+    // $("#submit").click(function(event) {
+    //     event.preventDefault();
+    //     $.ajax({
+    //         type: "GET",
+    //         url: "/api_call",
+    //         data: {
+    //             week: $("#week").val(),
+    //             season: $("#season").val()
+    //         },
+    //         success: function(data) {
+    //             return data
+    //         }
+    //     });
+    // });
 });
 
 function getQbData() {
@@ -22,10 +37,14 @@ function getQbData() {
     $.ajax({
         url: '/api_call',
         type: 'GET',
+        data: {
+            week: $("#week").val(),
+            season: $("#season").val()
+        },
         success: function(data) {
             var ajaxResult = {
-                season: 2014,
-                week: 15,
+                season: data.leaders.season,
+                week: data.leaders.week,
                 passing: [{
                     name: data.leaders.passing.player[0].name,
                     attempts: parseInt(data.leaders.passing.player[0].att),
@@ -126,6 +145,10 @@ function getRbData() {
     $.ajax({
         url: '/api_call',
         type: 'GET',
+        data: {
+            week: $("#week").val(),
+            season: $("#season").val()
+        },
         success: function(data) {
             var ajaxResult = {
                 season: 2014,
@@ -234,7 +257,11 @@ function getWrData() {
             var ajaxResult = {
                 season: 2014,
                 week: 15,
-                    receiving: [{
+                data: {
+                    week: $("#week").val(),
+                    season: $("#season").val()
+                },
+                receiving: [{
                     name: data.leaders.receiving.player[0].name,
                     receptions: parseInt(data.leaders.receiving.player[0].rec),
                     targets: parseInt(data.leaders.receiving.player[0].tar),
