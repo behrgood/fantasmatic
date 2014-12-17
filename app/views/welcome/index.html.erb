@@ -1,14 +1,16 @@
-<h1> App </h1>
-<h2> Words </h2>
+  <div class="formz">
+    <%= render 'form' %>
+  </div>
 
+<center>
 <div class="tab">
 
   <ul class="tabs">
-    <li><a href="#" onClick="chartLaunch()">QB</a></li>
-    <li><a href="#" onClick="chartLaunch()">RB</a></li>
-    <li><a href="#" onClick="chartLaunch()">WR</a></li>
-    <li><a href="#" onClick="chartLaunch()">TE</a></li>
-    <li><a href="#" onClick="chartLaunch()">DEF</a></li>
+    <li><a href="#" onClick="getQbData()">QB</a></li>
+    <li><a href="#" onClick="getQbData()">RB</a></li>
+    <li><a href="#" onClick="getQbData()">WR</a></li>
+    <li><a href="#" onClick="getQbData()">TE</a></li>
+    <li><a href="#" onClick="getQbData()">DEF</a></li>
   </ul> <!-- / tabs -->
 
   <div class="tab_content">
@@ -20,27 +22,27 @@
 
     <div class="tabs_item">
       <h4>RB - Week 14</h4>
-        <%= render 'rbgraph' %>
+       <p> This will show a graph. </p>
     </div> <!-- / tabs_item -->
 
     <div class="tabs_item">
       <h4>WR - Week 14</h4>
-         <%= render 'wrgraph' %>
+       <p> This will show a graph. </p>
     </div> <!-- / tabs_item -->
 
     <div class="tabs_item">
       <h4>TE - Week 14</h4>
-         <%= render 'tegraph' %>
+       <p> This will show a graph. </p>
     </div> <!-- / tabs_item -->
 
      <div class="tabs_item">
       <h4>DEF - Week 14</h4>
-       <%= render 'defgraph' %>
+      <p> This will show a graph. </p>
     </div> <!-- / tabs_item -->
 
   </div> <!-- / tab_content -->
 </div> <!-- / tab -->
-
+</center>
 <!--
 <%= %>
 <%= %>

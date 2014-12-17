@@ -1,21 +1,4 @@
-function chartLaunch() {
-    var data = {
-        title: 'Rushing Leaders',
-        subtitle: 'RB - Week 14',
-        categories: [
-            'Jeremy Hill',
-            'Arian Foster',
-            'Eddie Lacy',
-            'Doug Martin',
-            'Marshawn Lynch',
-            'CJ Anderson',
-            'DeMarco Murray',
-            'Giovani Bernard',
-            'Kerwynn Williams',
-            'Jonathon Stewart'
-        ],
-        rush_attempts: [1, 2, 3, 4, 5, 85, 81, 79, 75, 73]
-    }
+function chartLaunch(data) {
     $('#container').highcharts({
         chart: {
             type: 'column'
@@ -51,20 +34,19 @@ function chartLaunch() {
         },
         series: [{
             name: 'Attempts',
-            data: data.rush_attempts
+            data: data.pass_attempts
+
+        }, {
+            name: 'Completions',
+            data: data.pass_completions
 
         }, {
             name: 'Yards',
-            data: [148, 99, 97, 96, 91, 85, 81, 79, 75, 73]
+            data: data.pass_yards
 
         }, {
             name: 'Touchdowns',
-            data: [2, 0, 1, 0, 1, 0, 2, 0, 0, 0]
-
-        }, {
-            name: 'Fantasy Points',
-            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1]
-
+            data: data.pass_tds
         }]
     });
 }
