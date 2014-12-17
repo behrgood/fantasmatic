@@ -86,68 +86,8 @@ function getQbData() {
                     completions: parseInt(data.leaders.passing.player[9].cmp),
                     yards: parseInt(data.leaders.passing.player[9].yds),
                     touchdowns: parseInt(data.leaders.passing.player[9].td)
-                }],
-                    receiving: [{
-                    name: data.leaders.receiving.player[0].name,
-                    attempts: parseInt(data.leaders.receiving.player[0].rec),
-                    completions: parseInt(data.leaders.receiving.player[0].tar),
-                    yards: parseInt(data.leaders.receiving.player[0].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[0].td)
-                }, {
-                    name: data.leaders.receiving.player[1].name,
-                    attempts: parseInt(data.leaders.receiving.player[1].rec),
-                    completions: parseInt(data.leaders.receiving.player[1].tar),
-                    yards: parseInt(data.leaders.receiving.player[1].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[1].td)
-                }, {
-                    name: data.leaders.receiving.player[2].name,
-                    attempts: parseInt(data.leaders.receiving.player[2].rec),
-                    completions: parseInt(data.leaders.receiving.player[2].tar),
-                    yards: parseInt(data.leaders.receiving.player[2].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[2].td)
-                }, {
-                    name: data.leaders.receiving.player[3].name,
-                    attempts: parseInt(data.leaders.receiving.player[3].rec),
-                    completions: parseInt(data.leaders.receiving.player[3].tar),
-                    yards: parseInt(data.leaders.receiving.player[3].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[3].td)
-                }, {
-                    name: data.leaders.receiving.player[4].name,
-                    attempts: parseInt(data.leaders.receiving.player[4].rec),
-                    completions: parseInt(data.leaders.receiving.player[4].tar),
-                    yards: parseInt(data.leaders.receiving.player[4].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[4].td)
-                }, {
-                    name: data.leaders.receiving.player[5].name,
-                    attempts: parseInt(data.leaders.receiving.player[5].rec),
-                    completions: parseInt(data.leaders.receiving.player[5].tar),
-                    yards: parseInt(data.leaders.receiving.player[5].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[5].td)
-                }, {
-                    name: data.leaders.receiving.player[6].name,
-                    attempts: parseInt(data.leaders.receiving.player[6].rec),
-                    completions: parseInt(data.leaders.receiving.player[6].tar),
-                    yards: parseInt(data.leaders.receiving.player[6].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[6].td)
-                }, {
-                    name: data.leaders.receiving.player[7].name,
-                    attempts: parseInt(data.leaders.receiving.player[7].rec),
-                    completions: parseInt(data.leaders.receiving.player[7].tar),
-                    yards: parseInt(data.leaders.receiving.player[7].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[7].td)
-                }, {
-                    name: data.leaders.receiving.player[8].name,
-                    attempts: parseInt(data.leaders.receiving.player[8].rec),
-                    completions: parseInt(data.leaders.receiving.player[8].tar),
-                    yards: parseInt(data.leaders.receiving.player[8].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[8].td)
-                }, {
-                    name: data.leaders.receiving.player[9].name,
-                    attempts: parseInt(data.leaders.receiving.player[9].rec),
-                    completions: parseInt(data.leaders.receiving.player[9].tar),
-                    yards: parseInt(data.leaders.receiving.player[9].yds),
-                    touchdowns: parseInt(data.leaders.receiving.player[9].td)
                 }]
+
             }
             var chartData = parsePassingStatsToHighChartsData('15', ajaxResult)
             qbChartLaunch(chartData);
