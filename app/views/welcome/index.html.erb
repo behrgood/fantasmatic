@@ -7,7 +7,7 @@
     <li><a href="#" onClick="getQbData()">Passing</a></li>
     <li><a href="#" onClick="getRbData()">Rushing</a></li>
     <li><a href="#" onClick="getWrData()">Receiving</a></li>
-    <li><a href="#">Kicking</a></li>
+    <li><a href="#" onClick="getKData()">Kicking</a></li>
   </ul> <!-- / tabs -->
 
   <div class="tab_content">
@@ -25,7 +25,10 @@
     </div> <!-- / tabs_item -->
 
      <div class="tabs_item">
-      <h4>Who cares.</h4>
+       <%= render 'kgraph' %>
+      <%= image_tag "finkle.png" %>
+
+
     </div> <!-- / tabs_item -->
 
   </div> <!-- / tab_content -->
