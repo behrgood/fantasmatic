@@ -54,7 +54,7 @@ function qbChartLaunch(data) {
 function rbChartLaunch(data) {
     $('#container2').highcharts({
         chart: {
-            type: 'column'
+            type: 'bar'
         },
         title: {
             text: data.title
@@ -107,7 +107,7 @@ function rbChartLaunch(data) {
 function wrChartLaunch(data) {
     $('#container3').highcharts({
         chart: {
-            type: 'column'
+            type: 'bar'
         },
         title: {
             text: data.title
