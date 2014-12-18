@@ -1,28 +1,29 @@
-== README
+== ffScout
+rocky-dawn-5789.herokuapp.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ffScout is a single-page application that visualizes the NFL's weekly leaders' statistics by position through the past two years. It is designed for researchers of fantasy football in mind.
 
-Things you may want to cover:
+==Technologies Used:
 
-* Ruby version
+Ruby 2.1.2
+Rails 4.1.6
+HTTParty Gem
+SportsDataLLC API
+Highcharts
 
-* System dependencies
+==Erd:
+Being a single page application that is pulling all data from a third-party API, this application does not yet necessitate the use of models.
 
-* Configuration
+==Wireframe:
+http://i100.photobucket.com/albums/m39/mongrelitus/ScreenShot2014-12-17at105027PM_zpsfcdcf3dc.png
 
-* Database creation
+==User Stories
 
-* Database initialization
+A user should arrive at the page and be given two dropdown menus which retrieve data by week and by season.
 
-* How to run the test suite
+Upon selecting week and season on the dropdowns, user should be able to choose statistical leaders by position via tabs.
 
-* Services (job queues, cache servers, search engines, etc.)
+Upon clicking the tabs, the appropriate positional leaders' statistic should display in a bar chart.
 
-* Deployment instructions
+User should be able to interact with the chart -- toggling particular sets of satistical data on/off.
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
