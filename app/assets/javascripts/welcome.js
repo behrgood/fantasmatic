@@ -42,7 +42,7 @@ function getQbData() {
                         }
                         passingArray.push(passer)
                     }
-                    return passingArray
+                    return passingArray;
                 }
             }
             var chartData = parsePassingStatsToHighChartsData(ajaxResult.week, ajaxResult)
@@ -104,7 +104,7 @@ function getRbData() {
                         }
                         rushingArray.push(rusher)
                     }
-                    return rushingArray
+                    return rushingArray;
                 }
             }
 
@@ -156,7 +156,7 @@ function getWrData() {
                 season: data.leaders.week,
                 week: data.leaders.week,
                 receiving: function(data) {
-                    var receivingingArray = [];
+                    var receivingArray = [];
                     for (var i = 0; i < 10; i++) {
                         var receiver = {
                             name: data.leaders.receiving.player[0].name,
@@ -168,7 +168,7 @@ function getWrData() {
                         }
                         receivingArray.push(receiver)
                     }
-                    return receivingArray
+                    return receivingArray;
                 }
             }
 
@@ -219,59 +219,20 @@ function getKData() {
             var ajaxResult = {
                 season: data.leaders.week,
                 week: data.leaders.week,
-                field_goal: [{
-                    name: data.leaders.field_goal.player[0].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[0].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[0].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[0].lg),
-                }, {
-                    name: data.leaders.field_goal.player[1].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[1].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[1].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[1].lg),
-                }, {
-                    name: data.leaders.field_goal.player[2].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[2].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[2].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[2].lg),
-                }, {
-                    name: data.leaders.field_goal.player[3].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[3].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[3].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[3].lg),
-                }, {
-                    name: data.leaders.field_goal.player[4].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[4].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[4].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[4].lg),
-                }, {
-                    name: data.leaders.field_goal.player[5].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[5].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[5].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[5].lg),
-                }, {
-                    name: data.leaders.field_goal.player[6].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[6].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[6].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[6].lg),
-                }, {
-                    name: data.leaders.field_goal.player[7].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[7].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[7].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[7].lg),
-                }, {
-                    name: data.leaders.field_goal.player[8].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[8].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[8].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[8].lg),
-                }, {
-                    name: data.leaders.field_goal.player[9].name,
-                    fg_attempts: parseInt(data.leaders.field_goal.player[9].att),
-                    fg_made: parseInt(data.leaders.field_goal.player[9].made),
-                    fg_long: parseInt(data.leaders.field_goal.player[9].lg),
-                }]
+                field_goal: function(data) {
+                    var kickingArray = [];
+                    for (var i = 0; i < 10; i++) {
+                        var kicker = {
+                            name: data.leaders.field_goal.player[0].name,
+                            fg_attempts: parseInt(data.leaders.field_goal.player[0].att),
+                            fg_made: parseInt(data.leaders.field_goal.player[0].made),
+                            fg_long: parseInt(data.leaders.field_goal.player[0].lg),
+                        }
+                        kickingArray.push(kicker)
+                    }
+                    return kickingArray;
+                }
             }
-
             var chartData = parseKickerStatsToHighChartsData(ajaxResult.week, ajaxResult)
             kChartLaunch(chartData);
         },
